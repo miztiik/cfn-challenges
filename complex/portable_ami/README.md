@@ -11,11 +11,9 @@ The team has the following objectives to reduce their operational overhead:
 1. They wanted to use the latest version of the base AMI offered by the vendors, instead of maintaining custom images
 1. They are currently using two different OS flavors: _Amazon Linux 2_ and _Windows_
 
-One of their Ops Engineers, after watching a [Miztiik demo][1] in youtube came up with replacing the hard-coded values in the templates.
+One of their Ops Engineers, after watching a [Miztiik demo][1] in youtube came up an idea of replacing the hard-coded values in the templates. If you were the Ops Engineer, how would you proceed?
 
-If you were the Ops Engineer, how would you proceed?
-
-<sup>Hint: [Clue][2]</sup>
+<sup>Hint: [Refer][2]</sup>
 
 ## 👋 Buy me a coffee
 
