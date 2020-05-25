@@ -16,7 +16,39 @@
                 "DelaySeconds": 60,
                 "MaximumMessageSize": 4096,
                 "MessageRetentionPeriod": 65,
-                "QueueName": "Miztiik-Unicorn-App-Store-Orders-Q.fifo"
+                "QueueName": "Miztiik-Unicorn-App-Store-Orders-Q.fifo",
+                "Tags": [
+                    {
+                        "Key": "Application",
+                        "Value": {
+                            "Ref": "AWS::StackId"
+                        }
+                    },
+                    {
+                        "Key": "Network",
+                        "Value": "Public"
+                    },
+                    {
+                        "Key": "GithubRepo",
+                        "Value": "https://github.com/miztiik/cfn-challenges"
+                    },
+                    {
+                        "Key": "LearnCdk",
+                        "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+                    },
+                    {
+                        "Key": "Owner",
+                        "Value": "Mystique"
+                    },
+                    {
+                        "Key": "OwnerProfile",
+                        "Value": "https://github.com/miztiik"
+                    },
+                    {
+                        "Key": "ToKnowMore",
+                        "Value": "https://youtube.com/c/valaxytechnologies"
+                    }
+                ]
             }
         },
         "AlarmTopic": {
