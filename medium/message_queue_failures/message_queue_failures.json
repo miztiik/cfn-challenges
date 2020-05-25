@@ -1,0 +1,91 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Miztiik Automation: This template create an Amazon SQS queue with CloudWatch alarms on queue depth.",
+    "Parameters": {
+        "AlarmEmail": {
+            "Description": "Email address to notify of operational issues",
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "MyQueue": {
+            "Type": "AWS::SQS::Queue",
+            "Properties": {
+                "ContentBasedDeduplication": true,
+                "FifoQueue": true,
+                "DelaySeconds": 60,
+                "MaximumMessageSize": 4096,
+                "MessageRetentionPeriod": 65,
+                "QueueName": "Miztiik-Unicorn-App-Store-Orders-Q.fifo"
+            }
+        },
+        "AlarmTopic": {
+            "Type": "AWS::SNS::Topic",
+            "Properties": {
+                "Subscription": [
+                    {
+                        "Endpoint": {
+                            "Ref": "AlarmEmail"
+                        },
+                        "Protocol": "email"
+                    }
+                ]
+            }
+        },
+        "QueueDepthAlarm": {
+            "Type": "AWS::CloudWatch::Alarm",
+            "Properties": {
+                "AlarmDescription": "Alarm if queue depth increases to more than 10 messages",
+                "Namespace": "AWS/SQS",
+                "MetricName": "ApproximateNumberOfMessagesVisible",
+                "Dimensions": [
+                    {
+                        "Name": "QueueName",
+                        "Value": {
+                            "Fn::GetAtt": [
+                                "MyQueue",
+                                "QueueName"
+                            ]
+                        }
+                    }
+                ],
+                "Statistic": "Average",
+                "Period": "300",
+                "EvaluationPeriods": "2",
+                "Threshold": "5400",
+                "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+                "InsufficientDataActions": [
+                    {
+                        "Ref": "AlarmTopic"
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "QueueURL": {
+            "Description": "URL of new Amazon SQS Queue",
+            "Value": {
+                "Ref": "MyQueue"
+            }
+        },
+        "QueueARN": {
+            "Description": "ARN of new Amazon SQS Queue",
+            "Value": {
+                "Fn::GetAtt": [
+                    "MyQueue",
+                    "Arn"
+                ]
+            }
+        },
+        "QueueName": {
+            "Description": "Name new Amazon SQS Queue",
+            "Value": {
+                "Fn::GetAtt": [
+                    "MyQueue",
+                    "QueueName"
+                ]
+            }
+        }
+    }
+}
