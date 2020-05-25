@@ -1,0 +1,119 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Miztiik Automation to enable cloudtrail globally",
+    "Resources": {
+        "S3Bucket": {
+            "DeletionPolicy": "Retain",
+            "Type": "AWS::S3::Bucket",
+            "Properties": {}
+        },
+        "BucketPolicy": {
+            "Type": "AWS::S3::BucketPolicy",
+            "Properties": {
+                "Bucket": {
+                    "Ref": "S3Bucket"
+                },
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "AWSCloudTrailAclCheck",
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": "cloudtrail.amazonaws.com"
+                            },
+                            "Action": "s3:GetBucketAcl",
+                            "Resource": {
+                                "Fn::Join": [
+                                    "",
+                                    [
+                                        "arn:aws:s3:::",
+                                        {
+                                            "Ref": "S3Bucket"
+                                        }
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "Sid": "AWSCloudTrailWrite",
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": "cloudtrail.amazonaws.com"
+                            },
+                            "Action": "s3:PutObject",
+                            "Resource": {
+                                "Fn::Join": [
+                                    "",
+                                    [
+                                        "arn:aws:s3:::",
+                                        {
+                                            "Ref": "S3Bucket"
+                                        },
+                                        "/AWSLogs/",
+                                        {
+                                            "Ref": "AWS::AccountId"
+                                        },
+                                        "/*"
+                                    ]
+                                ]
+                            },
+                            "Condition": {
+                                "StringEquals": {
+                                    "s3:x-amz-acl": "bucket-owner-full-control"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "myTrail": {
+            "DependsOn": [
+                "BucketPolicy"
+            ],
+            "Type": "AWS::CloudTrail::Trail",
+            "Properties": {
+                "S3BucketName": {
+                    "Ref": "S3Bucket"
+                },
+                "IsLogging": true,
+                "IsMultiRegionTrail": true,
+                "EnableLogFileValidation": true,
+                "Tags": [
+                    {
+                        "Key": "Application",
+                        "Value": {
+                            "Ref": "AWS::StackId"
+                        }
+                    },
+                    {
+                        "Key": "Network",
+                        "Value": "Public"
+                    },
+                    {
+                        "Key": "GithubRepo",
+                        "Value": "https://github.com/miztiik/cfn-challenges"
+                    },
+                    {
+                        "Key": "LearnCdk",
+                        "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+                    },
+                    {
+                        "Key": "Owner",
+                        "Value": "Mystique"
+                    },
+                    {
+                        "Key": "OwnerProfile",
+                        "Value": "https://github.com/miztiik"
+                    },
+                    {
+                        "Key": "ToKnowMore",
+                        "Value": "https://youtube.com/c/valaxytechnologies"
+                    }
+                ],
+                "TrailName": "Miztiik-Automation"
+            }
+        }
+    }
+}
