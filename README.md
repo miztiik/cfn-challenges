@@ -26,6 +26,18 @@ After you figured out the solution, dont forget to send us a pull request with y
         --capabilities CAPABILITY_IAM
     ```
 
+1. ## 🔬 Solving the puzzle
+
+    Depending upon the puzzle, you may have to do one or some of these tasks to solve them.
+
+    - Check if, _ALL_ resources that are required are deployed.
+    - Check if, _ALL_ attributes for resources have been set correctly.
+        - For examples, Check if S3 bucket is having `versioning` or `encryption` etc.,
+    - Check if the resources are communicating with each other,
+        - For example, Is the Webserver accessible from public IP?
+
+    Good Luck
+
 1. ## 🧹 CleanUp
 
     If you want to destroy all the resources created by the stack, Execute the below command to delete the stack, or _you can delete the stack from console as well_
