@@ -15,6 +15,8 @@ After you figured out the solution, dont forget to send us a pull request with y
 
     Here is a sample CLI command to deploy the template. Make your you have downloaded the template `parameterize_ddb.json` and run this command from the same directory.
 
+    **NOTE**: These templates have been tested in `us-east-1` region. It is highly recommended to try them out them in the same region.
+
     ```bash
     # Configure AWS CLI
     aws configure
