@@ -551,7 +551,7 @@
                     },
                     {
                         "Key": "Network",
-                        "Value": "Public"
+                        "Value": "Private"
                     },
                     {
                         "Key": "GithubRepo",
