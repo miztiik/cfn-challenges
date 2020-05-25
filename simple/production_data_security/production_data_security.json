@@ -1,0 +1,70 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Secure Data Lake with S3 Encryption",
+  "Parameters": {
+    "EnvType": {
+      "Description": "Environment type.",
+      "Default": "test",
+      "Type": "String",
+      "AllowedValues": [
+        "uat",
+        "dev",
+        "test",
+        "acceptance",
+        "live"
+      ],
+      "ConstraintDescription": "must specify prod or test."
+    }
+  },
+  "Conditions": {
+    "SetUpProdEncryption": {
+      "Fn::Equals": [
+        {
+          "Ref": "EnvType"
+        },
+        "prod"
+      ]
+    }
+  },
+  "Resources": {
+    "EncryptedS3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Condition": "SetUpProdEncryption",
+      "Properties": {
+        "AccessControl": "Private",
+        "Tags": [
+          {
+            "Key": "GithubRepo",
+            "Value": "https://github.com/miztiik/cfn-challenges"
+          },
+          {
+            "Key": "LearnCdk",
+            "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+          },
+          {
+            "Key": "Owner",
+            "Value": "Mystique"
+          },
+          {
+            "Key": "OwnerProfile",
+            "Value": "https://github.com/miztiik"
+          },
+          {
+            "Key": "ToKnowMore",
+            "Value": "https://youtube.com/c/valaxytechnologies"
+          }
+        ],
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        }
+      },
+      "DeletionPolicy": "Delete"
+    }
+  }
+}

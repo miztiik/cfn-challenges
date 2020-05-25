@@ -1,0 +1,43 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation Template to create a SNS Topic",
+    "Resources": {
+        "BusinessUsersSnsTopic": {
+            "Type": "AWS::SNS::Topic",
+            "Properties": {
+                "DisplayName": "Miztiik-CloudFormation-Challenges-For-Everyone",
+                "TopicName": "Business-Campaigns-Topic",
+                "Tags": [
+                    {
+                        "Key": "GithubRepo",
+                        "Value": "https://github.com/miztiik/cfn-challenges"
+                    },
+                    {
+                        "Key": "LearnCdk",
+                        "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+                    },
+                    {
+                        "Key": "Owner",
+                        "Value": "Mystique"
+                    },
+                    {
+                        "Key": "OwnerProfile",
+                        "Value": "https://github.com/miztiik"
+                    },
+                    {
+                        "Key": "ToKnowMore",
+                        "Value": "https://youtube.com/c/valaxytechnologies"
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "SnsTopci": {
+            "Value": {
+                "Ref": "BusinessUsersSnsTopic"
+            },
+            "Description": "SNS Topic Name"
+        }
+    }
+}

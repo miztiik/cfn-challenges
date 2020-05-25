@@ -1,0 +1,57 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "AWS CloudFormation Sample Template DynamoDB_Table: This template demonstrates the creation of a DynamoDB table.",
+  "Resources": {
+    "myDynamoDBTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "Album",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "Album",
+            "KeyType": "HASH"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": "5",
+          "WriteCapacityUnits": "5"
+        },
+        "Tags": [
+          {
+            "Key": "GithubRepo",
+            "Value": "https://github.com/miztiik/cfn-challenges"
+          },
+          {
+            "Key": "LearnCdk",
+            "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+          },
+          {
+            "Key": "Owner",
+            "Value": "Mystique"
+          },
+          {
+            "Key": "OwnerProfile",
+            "Value": "https://github.com/miztiik"
+          },
+          {
+            "Key": "ToKnowMore",
+            "Value": "https://youtube.com/c/valaxytechnologies"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "TableName": {
+      "Value": {
+        "Ref": "myDynamoDBTable"
+      },
+      "Description": "Table name of the newly created DynamoDB table"
+    }
+  }
+}

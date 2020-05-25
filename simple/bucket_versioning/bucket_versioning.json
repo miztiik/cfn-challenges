@@ -1,0 +1,46 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Miztiiks Super Version Controlled Bucket, But is it?",
+  "Resources": {
+    "S3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "AccessControl": "Private",
+        "VersioningConfiguration": {
+          "Status": "Suspended"
+        },
+        "Tags": [
+          {
+            "Key": "GithubRepo",
+            "Value": "https://github.com/miztiik/cfn-challenges"
+          },
+          {
+            "Key": "LearnCdk",
+            "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+          },
+          {
+            "Key": "Owner",
+            "Value": "Mystique"
+          },
+          {
+            "Key": "OwnerProfile",
+            "Value": "https://github.com/miztiik"
+          },
+          {
+            "Key": "ToKnowMore",
+            "Value": "https://youtube.com/c/valaxytechnologies"
+          }
+        ]
+      },
+      "DeletionPolicy": "Retain"
+    }
+  },
+  "Outputs": {
+    "WebsiteURL": {
+      "Value": {
+        "Ref": "S3Bucket"
+      },
+      "Description": "Name of the S3 Bucket"
+    }
+  }
+}
