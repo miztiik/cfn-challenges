@@ -1,0 +1,198 @@
+[
+    {
+        "year": 2014,
+        "title": "X-Men: Days of Future Past",
+        "info": {
+            "directors": [
+                "Bryan Singer"
+            ],
+            "release_date": "2014-05-21T00:00:00Z",
+            "genres": [
+                "Action",
+                "Adventure",
+                "Fantasy",
+                "Sci-Fi"
+            ],
+            "image_url": "http://ia.media-imdb.com/images/M/MV5BMTQ0NzIwNTA1MV5BMl5BanBnXkFtZTgwNjY2OTcwMDE@._V1_SX400_.jpg",
+            "plot": "The X-Men send Wolverine to the past to change a major historical event that could globally impact man and mutant kind.",
+            "rank": 9,
+            "actors": [
+                "Jennifer Lawrence",
+                "Hugh Jackman",
+                "Michael Fassbender"
+            ]
+        }
+    },
+    {
+        "year": 2014,
+        "title": "Transformers: Age of Extinction",
+        "info": {
+            "directors": [
+                "Michael Bay"
+            ],
+            "release_date": "2014-06-25T00:00:00Z",
+            "genres": [
+                "Action",
+                "Adventure",
+                "Sci-Fi"
+            ],
+            "image_url": "http://ia.media-imdb.com/images/M/MV5BMTQyMDA5Nzg0Nl5BMl5BanBnXkFtZTgwNzA4NDcxMDE@._V1_SX400_.jpg",
+            "plot": "A mechanic and his daughter make a discovery that brings down Autobots and Decepticons - and a paranoid government official - on them.",
+            "rank": 10,
+            "actors": [
+                "Mark Wahlberg",
+                "Nicola Peltz",
+                "Jack Reynor"
+            ]
+        }
+    },
+    {
+        "year": 2013,
+        "title": "Now You See Me",
+        "info": {
+            "directors": [
+                "Louis Leterrier"
+            ],
+            "release_date": "2013-05-21T00:00:00Z",
+            "rating": 7.3,
+            "genres": [
+                "Crime",
+                "Mystery",
+                "Thriller"
+            ],
+            "image_url": "http://ia.media-imdb.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcwOTM5NzMzOQ@@._V1_SX400_.jpg",
+            "plot": "An FBI agent and an Interpol detective track a team of illusionists who pull off bank heists during their performances and reward their audiences with the money.",
+            "rank": 11,
+            "running_time_secs": 6900,
+            "actors": [
+                "Jesse Eisenberg",
+                "Common",
+                "Mark Ruffalo"
+            ]
+        }
+    },
+    {
+        "year": 2013,
+        "title": "Gravity",
+        "info": {
+            "directors": [
+                "Alfonso Cuaron"
+            ],
+            "release_date": "2013-08-28T00:00:00Z",
+            "rating": 8.2,
+            "genres": [
+                "Drama",
+                "Sci-Fi",
+                "Thriller"
+            ],
+            "image_url": "http://ia.media-imdb.com/images/M/MV5BNjE5MzYwMzYxMF5BMl5BanBnXkFtZTcwOTk4MTk0OQ@@._V1_SX400_.jpg",
+            "plot": "A medical engineer and an astronaut work together to survive after an accident leaves them adrift in space.",
+            "rank": 12,
+            "running_time_secs": 5400,
+            "actors": [
+                "Sandra Bullock",
+                "George Clooney",
+                "Ed Harris"
+            ]
+        }
+    },
+    {
+        "year": 2013,
+        "title": "We're the Millers",
+        "info": {
+            "directors": [
+                "Rawson Marshall Thurber"
+            ],
+            "release_date": "2013-08-03T00:00:00Z",
+            "rating": 7.2,
+            "genres": [
+                "Comedy",
+                "Crime"
+            ],
+            "image_url": "http://ia.media-imdb.com/images/M/MV5BMjA5Njc0NDUxNV5BMl5BanBnXkFtZTcwMjYzNzU1OQ@@._V1_SX400_.jpg",
+            "plot": "A veteran pot dealer creates a fake family as part of his plan to move a huge shipment of weed into the U.S. from Mexico.",
+            "rank": 13,
+            "running_time_secs": 6600,
+            "actors": [
+                "Jason Sudeikis",
+                "Jennifer Aniston",
+                "Emma Roberts"
+            ]
+        }
+    },
+    {
+        "year": 2013,
+        "title": "Riddick",
+        "info": {
+            "directors": [
+                "David Twohy"
+            ],
+            "release_date": "2013-09-04T00:00:00Z",
+            "rating": 6.8,
+            "genres": [
+                "Action",
+                "Sci-Fi",
+                "Thriller"
+            ],
+            "image_url": "http://ia.media-imdb.com/images/M/MV5BMTk5NzYwMzQ4MV5BMl5BanBnXkFtZTcwMjE5MTI1OQ@@._V1_SX400_.jpg",
+            "plot": "Left for dead on a sun-scorched planet, Riddick finds himself up against an alien race of predators. Activating an emergency beacon alerts two ships: one carrying a new breed of mercenary, the other captained by a man from Riddick's past.",
+            "rank": 14,
+            "running_time_secs": 7140,
+            "actors": [
+                "Vin Diesel",
+                "Karl Urban",
+                "Katee Sackhoff"
+            ]
+        }
+    },
+    {
+        "year": 2013,
+        "title": "The Family",
+        "info": {
+            "directors": [
+                "Luc Besson"
+            ],
+            "release_date": "2013-09-10T00:00:00Z",
+            "rating": 6.5,
+            "genres": [
+                "Action",
+                "Comedy",
+                "Crime"
+            ],
+            "image_url": "http://ia.media-imdb.com/images/M/MV5BMjE2MzI0MzkyNV5BMl5BanBnXkFtZTcwMjQ2MDM2OQ@@._V1_SX400_.jpg",
+            "plot": "The Manzoni family, a notorious mafia clan, is relocated to Normandy, France under the witness protection program, where fitting in soon becomes challenging as their old habits die hard.",
+            "rank": 15,
+            "running_time_secs": 6660,
+            "actors": [
+                "Robert De Niro",
+                "Michelle Pfeiffer",
+                "Dianna Agron"
+            ]
+        }
+    },
+    {
+        "year": 2013,
+        "title": "Star Trek Into Darkness",
+        "info": {
+            "directors": [
+                "J.J. Abrams"
+            ],
+            "release_date": "2013-05-02T00:00:00Z",
+            "rating": 7.9,
+            "genres": [
+                "Action",
+                "Adventure",
+                "Sci-Fi"
+            ],
+            "image_url": "http://ia.media-imdb.com/images/M/MV5BMTk2NzczOTgxNF5BMl5BanBnXkFtZTcwODQ5ODczOQ@@._V1_SX400_.jpg",
+            "plot": "After the crew of the Enterprise find an unstoppable force of terror from within their own organization, Captain Kirk leads a manhunt to a war-zone world to capture a one man weapon of mass destruction.",
+            "rank": 16,
+            "running_time_secs": 7920,
+            "actors": [
+                "Chris Pine",
+                "Zachary Quinto",
+                "Zoe Saldana"
+            ]
+        }
+    }
+]

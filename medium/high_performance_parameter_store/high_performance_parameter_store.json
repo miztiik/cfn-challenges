@@ -1,0 +1,26 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Miztiik Automation to store more than 20000 parameters",
+    "Resources": {
+        "HighPerformanceParameterStore": {
+            "Type": "AWS::SSM::Parameter",
+            "Properties": {
+                "Name": "MiztiikUnicornAppStore",
+                "Type": "String",
+                "Tier": "Standard",
+                "Value": "Miztiik-Automation",
+                "Description": "SSM Parameter for storing miztiik unicorn app parameters.",
+                "Tags": {
+                    "Application": {
+                        "Ref": "AWS::StackId"
+                    },
+                    "GithubRepo": "https://github.com/miztiik/cfn-challenges",
+                    "LearnCdk": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional",
+                    "Owner": "Mystique",
+                    "OwnerProfile": "https://github.com/miztiik",
+                    "ToKnowMore": "https://youtube.com/c/valaxytechnologies",
+                }
+            }
+        }
+    }
+}
