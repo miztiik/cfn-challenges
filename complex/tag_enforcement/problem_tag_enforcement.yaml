@@ -1,0 +1,86 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'Miztiik Automation: This template creates an EC2 instance. Your task to update it, so that the template can tag root volume of the EC2 Instance'
+Parameters:
+  KeyName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: Name of an existing EC2 KeyPair to SSH to the EC2 instances.
+  InstanceType:
+    Description: EC2 instance type
+    Type: String
+    Default: t2.micro
+    AllowedValues: [t2.micro, t2.small]
+    ConstraintDescription: Please choose a valid instance type.
+  InstanceAZ:
+   Description: EC2 AZ.
+   Type: AWS::EC2::AvailabilityZone::Name
+   ConstraintDescription: "Must be the name of an availabity zone."
+  MiztiikCustomAMI:
+    Type : AWS::SSM::Parameter::Value<String>
+    Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+
+Resources:
+  MystikalInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: !Ref MiztiikCustomAMI
+      InstanceType: !Ref InstanceType
+      AvailabilityZone: !Ref InstanceAZ
+      KeyName: !Ref SSHKeyName
+      Tags:
+        - Key: Name
+          Value: !Ref 'AWS::StackName'
+        - 
+          Key: Application
+          Value: Miztiik-Automation
+        - 
+          Key: GithubRepo
+          Value: "https://github.com/miztiik/cfn-challenges"
+        - 
+          Key: LearnCdk
+          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+        - 
+          Key: Owner
+          Value: Mystique
+        - 
+          Key: OwnerProfile
+          Value: "https://github.com/miztiik"
+        - 
+          Key: ToKnowMore
+          Value: "https://youtube.com/c/valaxytechnologies"
+
+      BlockDeviceMappings:
+        - DeviceName: /dev/sdm
+          Ebs:
+            VolumeType: io1
+            Iops: '200'
+            DeleteOnTermination: 'true'
+            VolumeSize: '10'
+
+  InstanceRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ecs.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: MystiqueAutomationTagSentryPolicy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'ec2:DescribeTags'
+                Resource: '*'
+  InstanceProfile:
+    Type: 'AWS::IAM::InstanceProfile'
+    Properties:
+      Path: /
+      Roles:
+        - !Ref InstanceRole
