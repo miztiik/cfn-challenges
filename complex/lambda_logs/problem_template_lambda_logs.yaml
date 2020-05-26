@@ -54,7 +54,8 @@ Resources:
               # This process of writing puzzles takes lot of effort
               # I need some rest
               time.sleep(15)
-              print(f"Event: json.dumps(event)")
+              print(f"Event: {json.dumps(event)}")
+              return "Hi, There! Welcome to Mystikal World"
       MemorySize: 64
       Timeout: 1
       Role:
@@ -66,6 +67,25 @@ Resources:
           ENV:
             Fn::Sub: ${EnvName}
           TZ: UTC
+      Tags: 
+        - 
+          Key: Application
+          Value: Miztiik-Automation
+        - 
+          Key: GithubRepo
+          Value: "https://github.com/miztiik/cfn-challenges"
+        - 
+          Key: LearnCdk
+          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+        - 
+          Key: Owner
+          Value: Mystique
+        - 
+          Key: OwnerProfile
+          Value: "https://github.com/miztiik"
+        - 
+          Key: ToKnowMore
+          Value: "https://youtube.com/c/valaxytechnologies"
 
 Outputs:
   LambdaRoleARN:
