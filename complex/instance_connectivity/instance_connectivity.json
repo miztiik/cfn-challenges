@@ -526,7 +526,7 @@
         "PrivateInstance": {
             "Type": "AWS::EC2::Instance",
             "Properties": {
-                "ImageId": "ami-0323c3dd2da7fb37d",
+                "ImageId": "ami-098f16afa9edf40be",
                 "InstanceType": "t2.micro",
                 "NetworkInterfaces": [
                     {
