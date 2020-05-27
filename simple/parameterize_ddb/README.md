@@ -15,4 +15,4 @@ Buy me a coffee ☕ through [Ko-Fi](https://ko-fi.com/miztiik).
 
 ### 🏷️ Metadata
 
-**Level**: 300
+**Level**: 200
