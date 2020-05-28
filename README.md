@@ -24,7 +24,7 @@ After you figured out the solution, dont forget to send us a pull request with y
     # Deploy the template
     aws cloudformation create-stack \
         --stack-name "miztiik-automation-clouformation-challenge-puzzles" \
-        --template-body file://parameterize_ddb.json \
+        --template-body file://REPLACE-WITH-TEMPLATE-FILE-NAME \
         --capabilities CAPABILITY_IAM
     ```
 
@@ -34,7 +34,7 @@ After you figured out the solution, dont forget to send us a pull request with y
 
     - Check if, _ALL_ resources that are required are deployed.
     - Check if, _ALL_ attributes for resources have been set correctly.
-        - For examples, Check if S3 bucket is having `versioning` or `encryption` etc.,
+        - For example, Check if S3 bucket is having `versioning` or `encryption` etc.,
     - Check if the resources are communicating with each other,
         - For example, Is the Webserver accessible from public IP?
 
