@@ -6,6 +6,8 @@ Your friend _Miztiik_ is attempting to create different templates for different 
 
 Can you help?
 
+<sup>Give me a helping hand: [Refer][1]</sup>
+
 ## 👋 Buy me a coffee
 
 Buy me a coffee ☕ through [Ko-Fi](https://ko-fi.com/miztiik).
@@ -13,3 +15,5 @@ Buy me a coffee ☕ through [Ko-Fi](https://ko-fi.com/miztiik).
 ### 🏷️ Metadata
 
 **Level**: 200
+
+[1]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html
