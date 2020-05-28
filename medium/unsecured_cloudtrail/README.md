@@ -6,10 +6,14 @@ Your company policy mandates all API call be logged in a secure manner. This wil
 
 Can you fix the issues with the template and setup cloudtrail?
 
+<sup>Give me a helping hand: [Refer][1]</sup>
+
 ## 👋 Buy me a coffee
 
 Buy me a coffee ☕ through [Ko-Fi](https://ko-fi.com/miztiik).
 
 ### 🏷️ Metadata
 
-**Level**: 300
+**Level**: 200
+
+[1]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html
