@@ -1,17 +1,17 @@
 # CloudFormation Challenges
 
-Learn AWS CloudFormation with these fun challenges to solve. This will help you understand the basics of cloudformation and how to combine multiple AWS services to create an applciation stack
+Learn AWS CloudFormation with these fun challenges to solve. This will help you understand the basics of cloudformation and how to combine multiple AWS services to create an application stack
 
 These are multiple puzzles in the directory. There are some defects or missing functionality introduced in each of these templates deliberately. Your task is find them and fix them to achieve the desired functionality. The difficulty level varies from _Simple, Medium and Complex_
 
-After you figured out the solution, dont forget to send us a pull request with your solution.
+After you figured out the solution, do not forget to send us a pull request with your solution.
 
 1. ## 🧰 Prerequisites
 
     - 🛠 AWS CLI Installed & Configured - [Get help here](https://youtu.be/TPyyfmQte0U)
     - 🛠 AWS CloudFormation Knowledge - [Get help here](https://www.udemy.com/course/draft/3110838/?referralCode=93AD3B1530BC871093D6)
 
-1. ## 🚀 Deploy AWS CloudFormation Tempalte
+1. ## 🚀 Deploy AWS CloudFormation Template
 
     Here is a sample CLI command to deploy the template. Make your you have downloaded the template `parameterize_ddb.json` and run this command from the same directory.
 
@@ -51,9 +51,9 @@ After you figured out the solution, dont forget to send us a pull request with y
 
     This is not an exhaustive list, please carry out other necessary steps as maybe applicable to your needs.
 
-## Who is using this
+## 📌 Who is using this
 
-A number of organisations are using gamification to enhance their team skills. This Udemy [course][100] uses this repository extensively to teach cloudformation to new beginners in AWS.
+This repository to teaches cloudformation to new developers, Solution Architects & Ops Engineers in AWS. Based on that knowledge these Udemy [course #1][103], [course #2][102] helps you build complete architecture in AWS.
 
 ### 💡 Help/Suggestions or 🐛 Bugs
 
@@ -61,14 +61,22 @@ Thank you for your interest in contributing to our project. Whether it's a bug r
 
 ### 👋 Buy me a coffee
 
-Buy me a coffee ☕ through [Ko-Fi](https://ko-fi.com/miztiik).
+Buy me a [coffee ☕][900].
 
 ### 🏷️ Metadata
 
 **Level**: 200
 
-[1]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-accesscontrol
+[100]: https://www.udemy.com/course/aws-cloud-security/?referralCode=B7F1B6C78B45ADAF77A9
 
-[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+[101]: https://www.udemy.com/course/aws-cloud-security-proactive-way/?referralCode=71DC542AD4481309A441
+
+[102]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
+
+[103]: https://www.udemy.com/course/aws-cloudformation-basics?referralCode=93AD3B1530BC871093D6
 
 [200]: https://github.com/miztiik/cfn-challenges/issues
+
+[899]: https://www.udemy.com/user/n-kumar/
+
+[900]: https://ko-fi.com/miztiik
