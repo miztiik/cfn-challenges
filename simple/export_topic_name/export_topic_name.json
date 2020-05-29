@@ -14,7 +14,7 @@
                     },
                     {
                         "Key": "LearnCdk",
-                        "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+                        "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
                     },
                     {
                         "Key": "Owner",
@@ -33,7 +33,11 @@
         }
     },
     "Outputs": {
-        "SnsTopci": {
+        "LearnCDK": {
+            "Description": "Stop Writing Cloudformation.Infrastructure Is Code:Learn CDK",
+            "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
+        },
+        "SnsTopic": {
             "Value": {
                 "Ref": "BusinessUsersSnsTopic"
             },
