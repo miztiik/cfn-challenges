@@ -42,7 +42,7 @@ After you figured out the solution, dont forget to send us a pull request with y
 
 1. ## 🧹 CleanUp
 
-    If you want to destroy all the resources created by the stack, Execute the below command to delete the stack, or _you can delete the stack from console as well_
+    *You* are responsible for the resources being created by any of the templates in this repository. You are encouraged to destroy all the resources after their purpose has been met. One of the way to clean up the resources is to execute the below command to delete the stack, or _you can delete the stack from console as well_
 
     ```bash
     aws cloudformation delete-stack \
@@ -51,12 +51,24 @@ After you figured out the solution, dont forget to send us a pull request with y
 
     This is not an exhaustive list, please carry out other necessary steps as maybe applicable to your needs.
 
-## 👋 Buy me a coffee
+## Who is using this
 
-[Buy me](https://paypal.me/valaxy) a coffee ☕, _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+A number of organisations are using gamification to enhance their team skills. This Udemy [course][100] uses this repository extensively to teach cloudformation to new beginners in AWS.
 
 ### 💡 Help/Suggestions or 🐛 Bugs
 
-Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community.
+Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional documentation or solutions, we greatly value feedback and contributions from our community. [Start here][200]
 
-- [Github Issues](https://github.com/miztiik/cfn-challenges/issues)
+### 👋 Buy me a coffee
+
+Buy me a coffee ☕ through [Ko-Fi](https://ko-fi.com/miztiik).
+
+### 🏷️ Metadata
+
+**Level**: 200
+
+[1]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-accesscontrol
+
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY
+
+[200]: https://github.com/miztiik/cfn-challenges/issues
