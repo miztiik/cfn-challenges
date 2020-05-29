@@ -76,7 +76,7 @@ Resources:
           Value: "https://github.com/miztiik/cfn-challenges"
         - 
           Key: LearnCdk
-          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
         - 
           Key: Owner
           Value: Mystique
@@ -88,6 +88,11 @@ Resources:
           Value: "https://youtube.com/c/valaxytechnologies"
 
 Outputs:
+
+  LearnCDK:
+    Description: 'Stop Writing Cloudformation.Infrastructure Is Code:Learn CDK'
+    Value: 'https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY'
+
   LambdaRoleARN:
     Description: Role for Lambda execution.
     Value:
