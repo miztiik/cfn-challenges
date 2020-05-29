@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Secure Data Lake with S3 Encryption",
+  "Description": "Miztiik Automation to create a secure Data Lake with S3 Encryption",
   "Parameters": {
     "EnvType": {
       "Description": "Environment type.",
@@ -39,7 +39,7 @@
           },
           {
             "Key": "LearnCdk",
-            "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
+            "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
           },
           {
             "Key": "Owner",
@@ -65,6 +65,12 @@
         }
       },
       "DeletionPolicy": "Delete"
+    }
+  },
+  "Outputs": {
+    "LearnCDK": {
+      "Description": "Stop Writing Cloudformation.Infrastructure Is Code:Learn CDK",
+      "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
     }
   }
 }
