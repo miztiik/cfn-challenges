@@ -32,6 +32,6 @@ Buy me a coffee ☕ through [Ko-Fi](https://ko-fi.com/miztiik).
 
 [1]: https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html
 
-[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
 
 [200]: https://github.com/miztiik/cfn-challenges/issues

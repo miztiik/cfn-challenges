@@ -34,6 +34,6 @@ Buy me a coffee ☕ through [Ko-Fi](https://ko-fi.com/miztiik).
 [1]: https://www.youtube.com/channel/UC_evcfxhjjui5hChhLE08tQ/search?query=ami
 [2]: https://aws.amazon.com/blogs/mt/query-for-the-latest-windows-ami-using-systems-manager-parameter-store/
 
-[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY
+[100]: https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579
 
 [200]: https://github.com/miztiik/cfn-challenges/issues

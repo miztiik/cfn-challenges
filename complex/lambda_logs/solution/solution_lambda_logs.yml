@@ -12,30 +12,22 @@ Parameters:
 
 Resources:
   LambdaRole:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       RoleName:
-        Fn::Sub: Miztiik-Automation-Role
+        Fn::Sub: lambda-role
       AssumeRolePolicyDocument:
-        Version: 2012-10-17
         Statement:
-          - Effect: Allow
+          - Action:
+            - sts:AssumeRole
+            Effect: Allow
             Principal:
               Service:
-              - ec2.amazonaws.com
-            Action:
-              - 'sts:AssumeRole'
+              - lambda.amazonaws.com
+        Version: 2012-10-17
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AWSLambdaExecute
       Path: /
-      Policies:
-        - PolicyName: MiztiikAutomationPermissions
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Effect: Allow
-                Action: 
-                  - "s3:GetObjects"
-                Resource: 
-                  - "arn:aws:s3:::*"
 
   LambdaFunction:
     Type: AWS::Lambda::Function
@@ -43,7 +35,7 @@ Resources:
       FunctionName:
         Fn::Sub: lambda-function-${EnvName}
       Description: LambdaFunction to run python code
-      Runtime: python3.8
+      Runtime: python3.7
       Handler: index.handler
       Code:
         ZipFile: |
@@ -56,8 +48,8 @@ Resources:
               time.sleep(15)
               print(f"Event: {json.dumps(event)}")
               return "Hi, There! Welcome to Mystikal World"
-      MemorySize: 64
-      Timeout: 1
+      MemorySize: 128
+      Timeout: 20
       Role:
         Fn::GetAtt:
           - LambdaRole
@@ -76,7 +68,7 @@ Resources:
           Value: "https://github.com/miztiik/cfn-challenges"
         - 
           Key: LearnCdk
-          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
+          Value: ""
         - 
           Key: Owner
           Value: Mystique
@@ -91,7 +83,7 @@ Outputs:
 
   LearnCDK:
     Description: 'Stop Writing Cloudformation.Infrastructure Is Code:Learn CDK'
-    Value: 'https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY'
+    Value: 'https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579'
 
   LambdaRoleARN:
     Description: Role for Lambda execution.

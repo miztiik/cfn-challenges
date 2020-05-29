@@ -1,6 +1,6 @@
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template multi-tier-vpc.template. The first subnet is public and contains a NAT device for internet access from the private subnet.",
+    "Description": "Miztiik Automation Template multi-tier-vpc.template. The first subnet is public and contains a NAT device for internet access from the private subnet.",
     "Parameters": {
         "SSHFrom": {
             "Description": "Lockdown SSH access to the host (default can be accessed from anywhere)",
@@ -53,7 +53,7 @@
                     },
                     {
                         "Key": "LearnCdk",
-                        "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
+                        "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
                     },
                     {
                         "Key": "Owner",
@@ -490,7 +490,7 @@
     "Outputs": {
         "LearnCDK": {
             "Description": "Stop Writing Cloudformation.Infrastructure Is Code:Learn CDK",
-            "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
+            "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579"
         },
         "VPCId": {
             "Description": "VPCId of the newly created VPC",

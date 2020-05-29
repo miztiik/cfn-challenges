@@ -87,7 +87,7 @@ Resources:
           Value: "https://github.com/miztiik/cfn-challenges"
         - 
           Key: LearnCdk
-          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
+          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
         - 
           Key: Owner
           Value: Mystique
@@ -167,7 +167,7 @@ Resources:
           Value: "https://github.com/miztiik/cfn-challenges"
         - 
           Key: LearnCdk
-          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
+          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
         - 
           Key: Owner
           Value: Mystique
@@ -245,7 +245,7 @@ Resources:
           Value: "https://github.com/miztiik/cfn-challenges"
         - 
           Key: LearnCdk
-          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
+          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
         - 
           Key: Owner
           Value: Mystique
@@ -397,7 +397,7 @@ Outputs:
 
   LearnCDK:
     Description: 'Stop Writing Cloudformation.Infrastructure Is Code:Learn CDK'
-    Value: 'https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY'
+    Value: 'https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579'
 
   WebServiceUrl:
     Description: The url of the Miztiik Unicorn App Web service

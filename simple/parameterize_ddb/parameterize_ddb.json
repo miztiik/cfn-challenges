@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "AWS CloudFormation Sample Template DynamoDB_Table: This template demonstrates the creation of a DynamoDB table.",
+  "Description": "Miztiik Automation Template DynamoDB_Table: This template demonstrates the creation of a DynamoDB table.",
   "Resources": {
     "myDynamoDBTable": {
       "Type": "AWS::DynamoDB::Table",
@@ -28,7 +28,7 @@
           },
           {
             "Key": "LearnCdk",
-            "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
+            "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
           },
           {
             "Key": "Owner",
@@ -49,7 +49,7 @@
   "Outputs": {
     "LearnCDK": {
       "Description": "Stop Writing Cloudformation.Infrastructure Is Code:Learn CDK",
-      "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY"
+      "Value": "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579"
     },
     "TableName": {
       "Value": {

@@ -19,25 +19,13 @@ Parameters:
     Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
 
 Resources:
-  #Tagging the root volume for the EC2 instances with the Windows OS
-  #The commented out powershell commands are to utilize if the AMI has the AWS CLI installed and you prefer that approach.
-  #Tagging the root volume for EC2 instances with an Unix OS with the AWS CLI installed.
   MystikalInstance:
     Type: 'AWS::EC2::Instance'
     Properties:
       ImageId: !Ref MiztiikCustomAMI
       InstanceType: !Ref InstanceType
       AvailabilityZone: !Ref InstanceAZ
-      IamInstanceProfile: !Ref InstanceProfile
-      KeyName: !Ref KeyName
-      UserData: 
-        Fn::Base64: |
-          #!/bin/bash
-          AWS_AVAIL_ZONE=$(curl http://169.254.169.254/latest/meta-data/placement/availability-zone)
-          AWS_REGION="`echo \"$AWS_AVAIL_ZONE\" | sed 's/[a-z]$//'`"
-          AWS_INSTANCE_ID=$(curl http://169.254.169.254/latest/meta-data/instance-id)
-          ROOT_VOLUME_IDS=$(aws ec2 describe-instances --region $AWS_REGION --instance-id $AWS_INSTANCE_ID --output text --query Reservations[0].Instances[0].BlockDeviceMappings[0].Ebs.VolumeId)
-          aws ec2 create-tags --resources $ROOT_VOLUME_IDS --region $AWS_REGION --tags Key=MiztiikAutomation,Value=RootVolumeTagged
+      KeyName: !Ref SSHKeyName
       Tags:
         - Key: Name
           Value: !Ref 'AWS::StackName'
@@ -49,7 +37,7 @@ Resources:
           Value: "https://github.com/miztiik/cfn-challenges"
         - 
           Key: LearnCdk
-          Value: ""
+          Value: "https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional"
         - 
           Key: Owner
           Value: Mystique
@@ -68,7 +56,6 @@ Resources:
             DeleteOnTermination: 'true'
             VolumeSize: '10'
 
-  #AMI role given to the instances, the instances need the describe and create tags to complete the UserData
   InstanceRole:
     Type: 'AWS::IAM::Role'
     Properties:
@@ -78,7 +65,7 @@ Resources:
           - Effect: Allow
             Principal:
               Service:
-                - ec2.amazonaws.com
+                - ecs.amazonaws.com
             Action:
               - 'sts:AssumeRole'
       Path: /
@@ -89,9 +76,9 @@ Resources:
             Statement:
               - Effect: Allow
                 Action:
-                  - 'ec2:Describe*'
-                  - 'ec2:CreateTags'
+                  - 'ec2:DescribeTags'
                 Resource: '*'
+
   InstanceProfile:
     Type: 'AWS::IAM::InstanceProfile'
     Properties:
@@ -102,4 +89,4 @@ Resources:
 Outputs:
   LearnCDK:
     Description: 'Stop Writing Cloudformation.Infrastructure Is Code:Learn CDK'
-    Value: 'https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579&couponCode=AWS_4U_MAY'
+    Value: 'https://www.udemy.com/course/aws-cloud-development-kit-from-beginner-to-professional/?referralCode=E15D7FB64E417C547579'
