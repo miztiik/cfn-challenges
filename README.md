@@ -46,7 +46,7 @@ After you figured out the solution, do not forget to send us a pull request with
 
     ```bash
     aws cloudformation delete-stack \
-        --stack-name "miztiik-automation-clouformation-challenge-puzzles"
+        --stack-name "miztiik-automation-cloudformation-challenge-puzzles"
     ```
 
     This is not an exhaustive list, please carry out other necessary steps as maybe applicable to your needs.
@@ -66,6 +66,12 @@ Buy me a [coffee ☕][900].
 ### 🏷️ Metadata
 
 **Level**: 200
+
+[1]:
+
+[2]:
+
+[3]:
 
 [100]: https://www.udemy.com/course/aws-cloud-security/?referralCode=B7F1B6C78B45ADAF77A9
 
